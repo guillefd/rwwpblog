@@ -13,9 +13,11 @@
 
 		</div><!-- #main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
+			<div class="container">
+				<p>Derechos reservados 2014 © - ReWrite - Diseño, desarrollo, cloud hosting y soporte.</p>
+			</div>
 			<div class="site-info">
-				<p>Proudly powered by<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">WordPress</a></p>
+				<p><small>Proudly powered by <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">WordPress</a></small></p>
 	    	</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
