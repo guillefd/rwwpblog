@@ -200,7 +200,6 @@ input:-moz-placeholder {
 
 /*--- Home -----------------------------------------------------------------------------------------------------------------*/
 
-
 #maincontainer{
 	background: rgba(255, 255, 255, 0.75);
 	width:98%;
@@ -225,6 +224,10 @@ input:-moz-placeholder {
 
 }
 
+.randomposts article, .widget, .entrypart article{
+	background: rgba(255, 255, 255, 0.75) !important;
+}
+
 .randomposts article{
 	box-shadow: none !important;
 	border-radius: 4px !important;
@@ -241,13 +244,41 @@ input:-moz-placeholder {
 
 }
 
+.widget-area aside{
+	padding: 0;
+}
+
+.widget-area aside:first-child{
+	margin-top:30px;
+}
+
+.widget .widget-title{
+	background: #3778b4 !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+.widget ul{
+	padding: 20px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.widget a{
+	color: #3778B4;
+}
+
+
+
+
+
 /*--- Page -------------------------------------------------------------------------------------------------------------------*/
 
 
-/*.site-content{
+.site-content{
 	padding-left: 30px;
 	padding-right: 30px;
-}*/
+}
 
 .pagecontent{
 	background: none !important;
@@ -283,6 +314,10 @@ h1, h2{
 	margin-bottom: 20px; 
 }
 
+#maincontainer .col-md-3{
+	padding-right: 30px;
+}
+
 /*--- Post -------------------------------------------------------------------------------------------------------------------*/
 
 .entry-meta{
@@ -316,7 +351,6 @@ h1, h2{
 }
 
 .col-md-9 .entry-title{    
-    max-width: 605px;
     width: auto;
     padding-top: 20px;
 	margin-bottom: 0;
