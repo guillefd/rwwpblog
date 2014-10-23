@@ -207,7 +207,7 @@ input:-moz-placeholder {
 	margin-right: auto;
 	padding-top: 0;
 	padding-left: 0;
-	padding-right: 0;
+	padding-right: 20px;
 	padding-bottom: 0px;
 }
 
@@ -282,6 +282,7 @@ input:-moz-placeholder {
 
 .pagecontent{
 	background: none !important;
+	padding-top: 15px !important;
 }
 
 .hentry{
@@ -297,6 +298,7 @@ input:-moz-placeholder {
 
 .entry-header{
 	margin-bottom: 0;
+	padding-bottom: 0 !important;
 }
 
 h1, h2{
@@ -305,8 +307,6 @@ h1, h2{
 
 .entry-content h2{
 	font-size: 20px;
-	margin-top: 20px;
-	margin-bottom: 10px;
 }
 
 .entry-content img{
@@ -314,8 +314,8 @@ h1, h2{
 	margin-bottom: 20px; 
 }
 
-#maincontainer .col-md-3{
-	padding-right: 30px;
+.entry-thumbnail img{
+	width: 100% !important;
 }
 
 /*--- Post -------------------------------------------------------------------------------------------------------------------*/
@@ -351,15 +351,17 @@ h1, h2{
 }
 
 .col-md-9 .entry-title{    
-    width: auto;
-    padding-top: 20px;
 	margin-bottom: 0;
+	color:#3778B4;
 }
 
 .hentry{
-	padding-top: 0;
-	padding-bottom: 0;
+	padding:20px;
 	margin-bottom: 0;
+}
+
+.pagecontent .hentry{
+	margin-left:20px;
 }
 
 .randomposts{
@@ -372,6 +374,10 @@ h1, h2{
 
 .comments-area{
 	display: none;
+}
+
+.page #tertiary, .single #tertiary{
+	display:none;
 }
 
 /*-- Footer --*/
