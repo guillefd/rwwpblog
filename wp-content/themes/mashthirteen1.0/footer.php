@@ -25,6 +25,12 @@
 	<?php wp_footer(); ?>	
 	<script type="text/javascript">
 	<?php echo of_get_option('analytics_textarea'); ?>
-</script>	
+</script>
+
+<script>var islrsharing = true; var islrsocialcounter = true;</script>
+<script src="//cdn.loginradius.com/share/v1/LoginRadius.min.js"></script>
+<script>LoginRadius.util.ready(function() { $i = $SS.Interface.horizontal; $SS.Providers.Top = ["Facebook", "Twitter", "GooglePlus"]; $i.sharecounttype='url';$i.size = 32; $i.show("lrsharecontainer");}); </script>
+<script>LoginRadius.util.ready(function() { $i = $SS.Interface.horizontal; $SS.Providers.Top = ["Facebook", "Twitter", "GooglePlus"]; $i.sharecounttype='url';$i.size = 16; $i.show("lrsharecontainer-sm");}); </script>
+
 </body>
 </html>

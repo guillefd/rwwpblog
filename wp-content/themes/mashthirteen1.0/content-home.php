@@ -31,7 +31,6 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 		<?php endif; // is_single() ?>
-
 		
 		
 	</header><!-- .entry-header -->
@@ -54,7 +53,7 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'mashthirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
+	<div class="lrsharecontainer-sm"></div>
 	<footer class="entry-meta">
 		<?php if ( comments_open() && ! is_single() ) : ?>
 			<div class="comments-link">
