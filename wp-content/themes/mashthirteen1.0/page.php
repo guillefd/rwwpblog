@@ -13,8 +13,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-md-9">
-		<div  class="col-md-12 pagecontent" role="main">
+	<div id="primary" class="col-md-12">
+		<div  class="col-md-9 pagecontent" role="main">
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -44,6 +44,10 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 		</div><!-- #content -->
+		<div  class="col-md-3 randomposts" >
+			<h2>Random Posts</h2>		
+		<?php get_template_part( 'content', 'random' ); ?>
+		</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

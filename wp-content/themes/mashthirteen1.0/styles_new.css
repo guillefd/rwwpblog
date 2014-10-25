@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Proxima Nova Light',serif !important;
 }
 
+a:hover{
+	color:#2693BA !important;
+	text-decoration: none;
+}
+
 /*--- Header ---*/
 
 .site_header_blog{
@@ -160,20 +165,40 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .search-field{
 	height: 20px;
 	background-image: url('images/search-icon.svg');
-	margin-top: 2px;
-	margin-right: 20px;
+	margin-top: 0;
+	margin-right: 21px;
+	line-height: 28px;
 }
 
 .site-header .search-field:focus{
 	background-color: rgba(81, 184, 221, 0.5);
 	border: none;
-	margin-top: 0;
 	height: 24px;
 	color: #fff !important;
 }
 
-/*--- Body -----------------------------------------------------------------------------------------------------------------*/
+::-webkit-input-placeholder { 
+	color:#fff;
+	margin-top: 5px;
+	font-family: 'Proxima Nova Light', sans-serif;
+}
+search-field ::-moz-placeholder { 
+	color:#fff;
+	margin-top: 5px;
+	font-family: 'Proxima Nova Light', sans-serif; 
+	} /* firefox 19+ */
+:-ms-input-placeholder { 
+	color:#fff;
+	margin-top: 5px;
+	font-family: 'Proxima Nova Light', sans-serif;
+	} /* ie */
+input:-moz-placeholder { 
+	color:#fff;
+	margin-top: 5px; 
+	font-family: 'Proxima Nova Light', sans-serif;
+}
 
+/*--- Home -----------------------------------------------------------------------------------------------------------------*/
 
 #maincontainer{
 	background: rgba(255, 255, 255, 0.75);
@@ -182,16 +207,25 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: auto;
 	padding-top: 0;
 	padding-left: 0;
-	padding-right: 0;
+	padding-right: 20px;
+	padding-bottom: 0px;
 }
 
 .entrypart article{
 	border-radius: 4px;
 }
 
-.randomposts{
-	background: rgba(255, 255, 255, 0.75) !important;
+.entrypart article p{
+	padding-bottom: 15px !important;
+}
 
+.randomposts{
+	background: rgba(255, 255, 255, 0.25) !important;
+
+}
+
+.randomposts article, .widget, .entrypart article{
+	background: rgba(255, 255, 255, 0.75) !important;
 }
 
 .randomposts article{
@@ -200,7 +234,173 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .randomposts h2{
-	background: url("images/rebon.svg") no-repeat scroll right bottom rgba(0, 0, 0, 0) !important;
+	background: url("images/rebon.png") no-repeat scroll right bottom rgba(0, 0, 0, 0) !important;
+	padding-top: 10px !important;
+	padding-bottom: 20px !important;
+	padding-left: 15px !important;
+	top: 30px !important;
+	right: -18px !important;
+	width: 106% !important;
 
 }
+
+.widget-area aside{
+	padding: 0;
+}
+
+.widget-area aside:first-child{
+	margin-top:30px;
+}
+
+.widget .widget-title{
+	background: #3778b4 !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+.widget ul{
+	padding: 20px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.widget a{
+	color: #3778B4;
+}
+
+
+
+
+
+/*--- Page -------------------------------------------------------------------------------------------------------------------*/
+
+
+.site-content{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.pagecontent{
+	background: none !important;
+	padding-top: 15px !important;
+}
+
+.hentry{
+	background-color: #fff;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-bottom: 30px !important;
+}
+
+.entry-content, .entry-header{
+	padding: 0 !important;
+}
+
+.entry-header{
+	margin-bottom: 0;
+	padding-bottom: 0 !important;
+}
+
+h1, h2{
+	margin:0;
+}
+
+.entry-content h2{
+	font-size: 20px;
+}
+
+.entry-content img{
+	margin-top: 20px;
+	margin-bottom: 20px; 
+}
+
+.entry-thumbnail img{
+	width: 100% !important;
+}
+
+/*--- Post -------------------------------------------------------------------------------------------------------------------*/
+
+.entry-meta{
+	display: none;
+}
+
+.single-post .entry-title, .entry-title a, .entry-content h2{
+	color: #3778B4;
+}
+
+.singlepost{
+	background: transparent !important;
+	margin-top: 15px;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.single-post .entry-title{
+	width: auto;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.singlepost .entry-content{
+	float: none !important;
+}
+
+.singlepost .randomposts{
+	padding-left: 0;
+}
+
+.col-md-9 .entry-title{    
+	margin-bottom: 0;
+	color:#3778B4;
+}
+
+.hentry{
+	padding:20px;
+	margin-bottom: 0;
+}
+
+.pagecontent .hentry{
+	margin-left:20px;
+}
+
+.randomposts{
+	min-height: 895px;
+}
+
+.entry-content a{
+	color: #3778B4 !important;
+}
+
+.comments-area{
+	display: none;
+}
+
+.page #tertiary, .single #tertiary{
+	display:none;
+}
+
+/*-- Footer --*/
+
+.site-footer{
+	background: none repeat scroll 0 0 rgba(41, 95, 146, 0.9) !important;
+}
+
+.site-footer p{
+	margin-top: 15px;
+}	
+.site-footer p, .site-footer p a{
+	color:#ACE9FC;
+}
+
+.site-info{
+	padding: 0;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+ .site-info p{
+ 	margin-top: 0;
+ 	padding-bottom: 15px;
+ }
 
