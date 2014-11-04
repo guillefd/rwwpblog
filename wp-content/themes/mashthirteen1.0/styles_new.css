@@ -11,12 +11,18 @@ body{
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(63,69,121,1) 0%,rgba(0,40,219,1) 0%,rgba(1,6,70,1) 72%) !important; /* IE10+ */
 	background: radial-gradient(ellipse at center,  rgba(63,69,121,1) 0%,rgba(0,40,219,1) 0%,rgba(1,6,70,1) 72%) !important; /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4579', endColorstr='#010646',GradientType=1 ) !important; /* IE6-9 fallback on horizontal gradient */
+	color:#666666;
 }
 
 
 @font-face {
   font-family: 'Proxima Nova Light';
   src: url('fonts/proximanova-light.eot?') format('eot'), url('fonts/proximanova-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('fonts/proximanova-bold.eot?') format('eot'), url('fonts/proximanova-bold.woff') format('woff');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -320,12 +326,22 @@ h1, h2{
 
 /*--- Post -------------------------------------------------------------------------------------------------------------------*/
 
+
+.post-meta{
+	padding-top: 15px !important;
+}
+
+.post-meta a{
+	color:#666;
+	font-size: 14px !important;
+}
+
 .entry-meta{
 	display: none;
 }
 
 .single-post .entry-title, .entry-title a, .entry-content h2{
-	color: #3778B4;
+	color: #003399;
 }
 
 .singlepost{
@@ -352,7 +368,7 @@ h1, h2{
 
 .col-md-9 .entry-title{    
 	margin-bottom: 0;
-	color:#3778B4;
+	color:#003399;
 }
 
 .hentry{
@@ -368,8 +384,12 @@ h1, h2{
 	min-height: 895px;
 }
 
+.randomposts article{
+	padding-bottom: 10px !important;
+}
+
 .entry-content a{
-	color: #3778B4 !important;
+	color: #003399 !important;
 }
 
 .comments-area{
@@ -380,6 +400,16 @@ h1, h2{
 	display:none;
 }
 
+.home .post-content p{
+	padding-bottom: 0 !important;
+	padding-bottom: 0;
+}
+
+.home .lrsharecontainer-sm{
+	margin-left: 10px;
+	padding-top: 0;
+} 
+
 /*-- Footer --*/
 
 .site-footer{
@@ -388,6 +418,7 @@ h1, h2{
 
 .site-footer p{
 	margin-top: 15px;
+	text-align: center;
 }	
 .site-footer p, .site-footer p a{
 	color:#ACE9FC;
