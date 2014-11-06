@@ -440,6 +440,10 @@ h1, h2{
 	padding-top: 0;
 } 
 
+.post-navigation{
+	display:none;
+}
+
 /*-- Footer --*/
 
 .site-footer{
