@@ -15,7 +15,8 @@
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
-		<?php endif; // is_single() ?>	
+		<?php endif; // is_single() ?>
+		<div class="lrsharecontainer"></div>	
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 		<header class="entry-header">	
 		<div class="entry-thumbnail">
@@ -23,7 +24,6 @@
 		</div>
 		</header><!-- .entry-header -->
 		<?php endif; ?>
-	
 	<div class="entry-meta">
 	<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 	<?php echo get_avatar( get_the_author_id() ); ?>

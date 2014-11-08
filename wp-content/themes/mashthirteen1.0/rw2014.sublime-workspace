@@ -110,6 +110,14 @@
 				"buffer_size": 54815,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "single.php",
+			"settings":
+			{
+				"buffer_size": 836,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -139,14 +147,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Applications/MAMP/htdocs/rw2014",
 		"/Applications/MAMP/htdocs/rw2014/addons",
 		"/Applications/MAMP/htdocs/rw2014/addons/default",
 		"/Applications/MAMP/htdocs/rw2014/addons/default/field_types",
 		"/Applications/MAMP/htdocs/rw2014/addons/shared_addons",
 		"/Applications/MAMP/htdocs/rw2014/addons/shared_addons/themes",
 		"/Applications/MAMP/htdocs/rw2014/addons/shared_addons/themes/rw1",
-		"/Applications/MAMP/htdocs/rw2014/addons/shared_addons/themes/rw1/css"
+		"/Applications/MAMP/htdocs/rw2014/addons/shared_addons/themes/rw1/views"
 	],
 	"file_history":
 	[
@@ -257,7 +264,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -283,6 +290,35 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 34814.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "single.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
