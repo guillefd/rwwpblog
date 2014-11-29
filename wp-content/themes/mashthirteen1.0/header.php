@@ -28,7 +28,6 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/respond.min.js" type="text/javascript"></script>
 	<![endif]-->
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.js" type="text/javascript"></script>
 	<?php wp_head(); ?>
 	<!--<link media="all" rel="stylesheet" href="<?php //echo get_stylesheet_directory_uri(); ?>/styles_new.css" type="text">
 </head>-->

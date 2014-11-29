@@ -11,9 +11,9 @@
 
 <?php 
 if(get_query_var('cat') !='')
-	$posts = get_posts('cat='.get_query_var('cat').'&orderby=rand&numberposts=10'); 
+	$posts = get_posts('cat='.get_query_var('cat').'&orderby=rand&numberposts=4'); 
 else
-	$posts = get_posts('orderby=rand&numberposts=10'); 
+	$posts = get_posts('orderby=rand&numberposts=5'); 
 
 foreach($posts as $post) { ?>
 <article <?php post_class(); ?>>

@@ -433,6 +433,9 @@ h1, h2{
 .home .post-content p{
 	padding-bottom: 0 !important;
 	padding-bottom: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .home .lrsharecontainer-sm{

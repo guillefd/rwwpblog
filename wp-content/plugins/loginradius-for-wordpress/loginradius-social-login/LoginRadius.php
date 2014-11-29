@@ -88,7 +88,7 @@ if ( !class_exists( 'Login_Radius' ) ) {
 		 */
 		private function define_constants() {
 
-			define( 'LOGINRADIUS_SOCIALLOGIN_VERSION', '6.1' );
+			define( 'LOGINRADIUS_SOCIALLOGIN_VERSION', '6.1.3' );
 			define( 'LOGINRADIUS_MIN_WP_VERSION', '3.4' );
 			define( 'LOGINRADIUS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 			define( 'LOGINRADIUS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -101,7 +101,7 @@ if ( !class_exists( 'Login_Radius' ) ) {
 		 * @global loginRadiusSettings, loginRadiusObject
 		 */
 		private function load_dependencies() {
-			global $loginRadiusSettings, $loginradius_api_settings, $loginRadiusObject;
+			global $loginRadiusSettings, $loginradius_api_settings, $loginRadiusObject, $loginRadiusLoginIsBpActive;
 
 			//Load required files.
 			require_once ('lib/LoginRadiusSDK.php');
@@ -109,6 +109,7 @@ if ( !class_exists( 'Login_Radius' ) ) {
 			require_once ('common/loginradius-ajax.php');
 			require_once('widgets/loginradius-social-login-widget.php');
 			require_once('widgets/loginradius-social-linking-widget.php');
+			require_once('public/inc/login/class-login-helper.php');
 
 			// Get objetc for LoginRadius Sdk
 			$loginRadiusObject = new Login_Radius_SDK();
@@ -118,6 +119,10 @@ if ( !class_exists( 'Login_Radius' ) ) {
 
 			// Get LoginRadius plugin settings.
 			$loginradius_api_settings = get_option( 'LoginRadius_API_settings' );
+
+			$loginRadiusLoginIsBpActive = false;
+
+			add_action( 'bp_include', array('Login_Helper', 'set_budddy_press_status_variable') );
 
 			// Admin Panel
 			if ( is_admin() ) {

@@ -5,7 +5,7 @@ Tags: Social login, Social share, social commenting, Wordpress plugin, BuddyPres
 single sign-on, Social Login Plug-in, Twitter, Google, Yahoo OpenID, Linkedin login, social media tools, free social sharing, post to social networks, social authentication, social api, social app, facebook connect, google connect, capture social data, wordpress multisite, Social Sign-in, social plugins, SSO technology
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 6.1
+Stable tag: 6.1.3
 License: GPLv2 or later
 
 Let your users log in, comment and share via their social accounts with Facebook, Google, Amazon, Twitter, LinkedIn, Vkontakte, QQ and over 25 more!
@@ -195,6 +195,17 @@ LoginRadius is a Canadian Startup that offers Social Infrastructure to websites 
 3. **Social Login Settings**: Wordpress admin panel for customization of Social Login, Social Sharing and Social Commenting interfaces.
 
 == Changelog ==
+
+= 6.1.3 =
+* Disable sharing fix per page/post
+
+= 6.1.2 =
+* Added Buddypress Login/Register Options
+* iOS login fix
+
+= 6.1.1 =
+* Buddypress Avatar Fix
+
 = 6.1 =
 * Added new options for social login and social sharing
 * Released responsive interfaces for Social Login and Social Sharing
@@ -603,3 +614,13 @@ Bug fixed for popup in IE
 * Revamp User interface and User Experience of Admin interface
 * Simple and easy to use admin options
 * Fixed some bugs related to social sharing
+
+= 6.1.1 =
+* Buddypress Avatar Fix
+
+= 6.1.2 =
+* Added Buddypress Login/Register Options
+* iOS login fix
+
+= 6.1.3 =
+* Disable sharing fix per page/post

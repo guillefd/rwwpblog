@@ -1,27 +1,26 @@
 <?php
 global $login_options;
 $login_options = array(
-			'LoginRadius_loginform' => '1',
-			'LoginRadius_regform' => '1',
-			'LoginRadius_regformPosition' => 'embed',
-			'LoginRadius_commentEnable' => '0',
-			'LoginRadius_numColumns' => '4',
-			'LoginRadius_noProvider' => '1',
-			'LoginRadius_enableUserActivation' => '1',
-			'delete_options' => '1',
-			'username_separator' => 'dash',
-			'LoginRadius_redirect' => 'samepage',
-			'LoginRadius_regRedirect' => 'samepage',
-			'LoginRadius_loutRedirect' => 'homepage',
-			'LoginRadius_socialavatar' => 'socialavatar',
-			'LoginRadius_title' => 'Log in via a social account',
-			'enable_degugging' => '0',
-			'LoginRadius_sendemail' => 'notsendemail',
-			'LoginRadius_dummyemail' => 'notdummyemail',
-			'msg_email' => 'Unfortunately we could not retrieve email from your @provider account. Please enter your email in the form below in order to continue.',
-			'msg_existemail' => 'This email is already registered. Please log in with this email and link any additional ID providers via account linking on your profile page.'
-
-
+			'LoginRadius_loginform'				=> '1',
+			'LoginRadius_loginformPosition'		=> 'embed',
+			'LoginRadius_regform'				=> '1',
+			'LoginRadius_regformPosition'		=> 'embed',
+			'LoginRadius_commentEnable'			=> '0',
+			'LoginRadius_numColumns'			=> '4',
+			'LoginRadius_noProvider'			=> '1',
+			'LoginRadius_enableUserActivation'	=> '1',
+			'delete_options'					=> '1',
+			'username_separator'				=> 'dash',
+			'LoginRadius_redirect'				=> 'samepage',
+			'LoginRadius_regRedirect'			=> 'samepage',
+			'LoginRadius_loutRedirect'			=> 'homepage',
+			'LoginRadius_socialavatar'			=> 'socialavatar',
+			'LoginRadius_title'					=> 'Log in via a social account',
+			'enable_degugging'					=> '0',
+			'LoginRadius_sendemail'				=> 'notsendemail',
+			'LoginRadius_dummyemail'			=> 'notdummyemail',
+			'msg_email'							=> 'Unfortunately we could not retrieve email from your @provider account. Please enter your email in the form below in order to continue.',
+			'msg_existemail'					=> 'This email is already registered. Please log in with this email and link any additional ID providers via account linking on your profile page.'
 );
 
 /**

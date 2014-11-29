@@ -532,7 +532,6 @@ if ( !class_exists( 'Login_Helper' ) ) {
 					 * Function is called if buddypress is active, it sets
 					 * LoginRadius global variable $loginRadiusLoginIsBpActive to true
 					 */
-
 					public static function set_budddy_press_status_variable() {
 						global $loginRadiusLoginIsBpActive;
 						$loginRadiusLoginIsBpActive = true;
