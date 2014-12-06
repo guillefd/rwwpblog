@@ -47,9 +47,11 @@
 	    			<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'mashthirteen' ); ?>"><?php _e( 'Skip to content', 'mashthirteen' ); ?></a>
 	    			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 	    			<?php if ( get_theme_mod( 'mashthirteen_menusearch_visibility' ) != 1 ) { ?>
-	    			<?php // get_search_form(); ?>
-	    		
-						<div class="gcs_container pull-right">
+	    			<?php //get_search_form(); ?>
+	    				<div class="search-form-gcs">
+	    					<span id="gcstrigger" class="search-field-gcs"></span>
+	    				</div>
+						<div id="gcscontainer" class="gcs_container pull-right">
 							<div id='cse' style='width: 100%;'>Loading</div>
 								<script src='//www.google.com/jsapi' type='text/javascript'></script>
 								<script type='text/javascript'>
@@ -67,6 +69,30 @@
 								options.setAutoComplete(true);
 								customSearchControl.draw('cse', options);
 								}, true);
+								</script>
+								<script>
+									jQuery(document).ready(function($) {
+										// init container hidden
+										$('#gcscontainer').hide();
+
+										//trigger
+										$('#gcstrigger').click(function(){
+											toggle_container();
+										});
+
+										function toggle_container()
+										{
+											if( $('#gcscontainer').css('display')=='none')
+											{
+												$('#gcscontainer').show();
+											}
+											else
+												{
+													$('#gcscontainer').hide();
+												}
+										}
+
+									});
 								</script>
 							</div>
 						</div>

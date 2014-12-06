@@ -531,6 +531,32 @@ h1, h2{
 	border: none;
 }	
 
+.search-form-gcs{
+	position: absolute;
+	right: 20px;
+	top: -3px;
+}
+.search-field-gcs{
+	height: 20px;
+	background-image: url('images/search-icon.svg');
+	margin-top: 0;
+	margin-right: 21px;
+	line-height: 28px;
+	background-color: transparent;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	border: none;
+	cursor: pointer;
+	height: 37px;
+	margin: 3px 0;
+	padding: 0 0 0 34px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition: width 400ms ease, background 400ms ease;
+	width: 0;
+}
+
 /*-- Footer --*/
 
 .site-footer{
