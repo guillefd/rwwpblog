@@ -26,6 +26,10 @@ a:hover{
 	text-decoration: none;
 }
 
+.randomposts article .entry-title{
+	font-size: 130% !important;
+}
+
 /*--- Header ---*/
 
 .site_header_blog{
@@ -135,22 +139,15 @@ a:hover{
 }
 
 .nav-menu{
-	margin-left: 45px;
-}
-
-.nav-menu li{
-	margin-top: 4px;
+	margin-left: 44px;
 }
 
 .nav-menu li a{
-	padding: 4px !important;
-	padding-bottom: 2px !important;
-	padding-right: 4px !important;
-	padding-left: 4px !important;
-	margin-right: 10px !important;
-	font-size: 12px !important;
+	padding: 6px !important;
+	padding-right: 6px !important;
+	padding-left: 6px !important;
+	font-size: 14px !important;
 	text-transform: uppercase !important;
-	border-radius: 4px;
 	color: #ACE9FC !important;
 }
 
@@ -209,10 +206,11 @@ input:-moz-placeholder {
 }
 
 .gcs_container{
-	width: 25%;
+	width: 23.4%;
 	position: relative;
 	margin: 0 !important;
 	padding: 0 !important;
+	right:46px;
 }
 
 .cse .gsc-control-cse, .gsc-control-cse{
@@ -226,8 +224,9 @@ input:-moz-placeholder {
 }
 
 .gsc-search-box-tools .gsc-search-box .gsc-input{
-	padding-left: 12px !important;
+	padding-left: 2px !important;
 	padding-right: 0 !important;
+	padding-bottom: 0 !important;
 }
 
 .gsib_a{
@@ -239,8 +238,16 @@ input:-moz-placeholder {
 	border-color: transparent !important;
 }
 
-.gsc-input table td{
+.gsc-input{
 	border-top: none !important;
+
+}
+
+td{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border-top: none !important;
+	padding-right: 15px !important;
 }
 
 input.gsc-search-button{
@@ -248,7 +255,7 @@ input.gsc-search-button{
 }
 
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2{
-	margin-top: 0 !important;
+	margin-top: -3px !important;
 }
 
 .gsc-input-box{
@@ -256,9 +263,47 @@ input.gsc-search-button{
 }
 
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2{
-	height: 20px !important;
+	height: 25px !important;
 	min-width: 25px !important;
 	max-width: 0 !important;
+}
+
+input{
+	vertical-align: middle !important;
+}
+
+input.gsc-search-button-v2{
+	padding: 5px 5px !important;
+}
+
+table.gsc-search-box{
+	margin-bottom: 0 !important;
+}
+
+table.gsc-search-box td{
+	vertical-align: middle !important;
+	margin-bottom: 0 !important;
+}
+
+.gsib_b{
+	padding-right: 0 !important;
+}
+
+ul.nav-menu, div.nav-menu > ul{
+	padding-right: 13px;
+}
+
+form.gsc-search-box{
+	padding: 10px !important;
+	margin-top: -1px;
+}
+
+.gsc-results-wrapper-visible{
+	top: 147px !important;
+}
+
+.gsc-inline-block{
+	width: auto !important;
 }
 
 /*--- Home -----------------------------------------------------------------------------------------------------------------*/
@@ -270,7 +315,7 @@ input.gsc-search-button{
 	margin-right: auto;
 	padding-top: 0;
 	padding-left: 0;
-	padding-right: 20px;
+	padding-right: 18px;
 	padding-bottom: 0px;
 }
 
@@ -350,7 +395,18 @@ input.gsc-search-button{
 	background: rgba(255, 255, 255, 0.75) !important;
 }
 
+.entrypart{
+	padding-left: 0 !important;
+}
 
+.col-md-9{
+	padding-left: 30px !important;
+}
+
+.home .col-md-3{
+	padding-right: 15px !important;
+	padding-left: 0 !important;
+}
 
 /*--- Page -------------------------------------------------------------------------------------------------------------------*/
 
@@ -362,7 +418,8 @@ input.gsc-search-button{
 
 .pagecontent{
 	background: none !important;
-	padding-top: 15px !important;
+	padding-top: 30px !important;
+	padding-left: 15px !important;
 }
 
 .hentry{
@@ -370,6 +427,7 @@ input.gsc-search-button{
     border-radius: 4px;
     margin-right: 15px;
     margin-bottom: 15px !important;
+    margin-left: 0 !important;
 }
 
 .entry-content, .entry-header{
@@ -398,8 +456,19 @@ h1, h2{
 	width: 100% !important;
 }
 
+.singlepost{
+	padding-left: 0 !important;
+}
+
+.randomposts{
+	padding-right: 15px !important;
+}
+
 /*--- Post -------------------------------------------------------------------------------------------------------------------*/
 
+.single #maincontainer{
+ padding-right: 4px;
+}
 
 .post-meta{
 	padding-top: 15px !important;
@@ -420,7 +489,7 @@ h1, h2{
 
 .singlepost{
 	background: transparent !important;
-	margin-top: 15px;
+	margin-top: 30px;
 	padding-right: 0;
 	padding-left: 0;
 }
@@ -533,24 +602,23 @@ h1, h2{
 
 .search-form-gcs{
 	position: absolute;
-	right: 20px;
+	right: 46px;
 	top: -3px;
 }
 .search-field-gcs{
-	height: 20px;
+	display:block;
+	height: 25px;
 	background-image: url('images/search-icon.svg');
-	margin-top: 0;
 	margin-right: 21px;
 	line-height: 28px;
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.20);
 	background-position: 5px center;
 	background-repeat: no-repeat;
-	background-size: 24px 24px;
+	background-size: 20px 20px;
 	border: none;
 	cursor: pointer;
-	height: 37px;
 	margin: 3px 0;
-	padding: 0 0 0 34px;
+	padding: 0 0 0 30px;
 	position: relative;
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition: width 400ms ease, background 400ms ease;
