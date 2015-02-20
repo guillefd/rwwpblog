@@ -3,21 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="19px" height="15px" viewBox="0 0 19 15" enable-background="new 0 0 19 15" xml:space="preserve">
-<g id="bg">
-</g>
-<g id="bg-body-1">
-	<g id="Layer_7">
-	</g>
-</g>
-<g id="bg-body" display="none">
-</g>
-<g id="content">
-</g>
-<g id="footer">
-</g>
-<ellipse fill="none" stroke="#ACE9FC" stroke-miterlimit="10" cx="8.129" cy="6.825" rx="4.934" ry="4.729"/>
-<ellipse opacity="0.5" fill="#51B8DD" enable-background="new    " cx="8.15" cy="6.846" rx="4.443" ry="4.259"/>
-<line fill="none" stroke="#ACE9FC" stroke-miterlimit="10" x1="12.021" y1="9.459" x2="17.195" y2="13.1"/>
-<g id="guides" display="none">
+<g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.9148" stroke-miterlimit="10" x1="3.688" y1="13.274" x2="7.541" y2="9.421"/>
+	<ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="10.583" cy="5.967" rx="4.005" ry="4.039"/>
 </g>
 </svg>

@@ -20,6 +20,22 @@ function login_radius_render_social_login_options() {
 						<span class="lr-tooltip" data-title="Default login page provided by WordPress">
 							<span class="dashicons dashicons-editor-help"></span>
 						</span>
+						<?php
+							if ( isset( $loginRadiusLoginIsBpActive ) && $loginRadiusLoginIsBpActive ) {
+								?>
+								<div class="lr-reg-form-options">
+									<label>
+										<input type="radio" name="LoginRadius_settings[LoginRadius_loginformPosition]" value="embed" <?php echo ( isset($loginRadiusSettings['LoginRadius_loginformPosition']) && $loginRadiusSettings['LoginRadius_loginformPosition'] == 'embed') ? 'checked = "checked"' : ''; ?> />
+										<span><?php _e( 'Display the Social Login interface below the Wordpress login form', 'LoginRadius' ); ?></span>
+									</label>
+									<label>
+										<input type="radio" name="LoginRadius_settings[LoginRadius_loginformPosition]" value="beside" <?php echo ( isset($loginRadiusSettings['LoginRadius_loginformPosition']) && $loginRadiusSettings['LoginRadius_loginformPosition'] == 'beside') ? 'checked = "checked"' : ''; ?> />
+										<span><?php _e( 'Display the Social Login interface beside the Buddypress login form', 'LoginRadius' ); ?></span>
+									</label>
+								</div>
+								<?php
+							}
+						?>
 					</label>
 				</div>
 				<div>
@@ -29,18 +45,23 @@ function login_radius_render_social_login_options() {
 						<span class="lr-tooltip" data-title="Default registration page provided by WordPress">
 							<span class="dashicons dashicons-editor-help"></span>
 						</span>
-						<div class="lr-reg-form-options">
-							<label>
-								<input type="radio" name="LoginRadius_settings[LoginRadius_regformPosition]" value="embed" <?php echo ( isset($loginRadiusSettings['LoginRadius_regformPosition']) && $loginRadiusSettings['LoginRadius_regformPosition'] == 'embed') ? 'checked = "checked"' : ''; ?> />
-								<span><?php _e( 'Display the Social Login interface below the registration form', 'LoginRadius' ); ?></span>
-							</label>
-							<label>
-								<input type="radio" name="LoginRadius_settings[LoginRadius_regformPosition]" value="beside" <?php echo ( isset($loginRadiusSettings['LoginRadius_regformPosition']) && $loginRadiusSettings['LoginRadius_regformPosition'] == 'beside') ? 'checked = "checked"' : ''; ?> />
-								<span><?php _e( 'Display the Social Login interface beside the registration form', 'LoginRadius' ); ?></span>
-							</label>
-						</div>
+						<?php
+							if ( isset( $loginRadiusLoginIsBpActive ) && $loginRadiusLoginIsBpActive ) {
+								?>
+								<div class="lr-reg-form-options">
+									<label>
+										<input type="radio" name="LoginRadius_settings[LoginRadius_regformPosition]" value="embed" <?php echo ( isset($loginRadiusSettings['LoginRadius_regformPosition']) && $loginRadiusSettings['LoginRadius_regformPosition'] == 'embed') ? 'checked = "checked"' : ''; ?> />
+										<span><?php _e( 'Display the Social Login interface below the Wordpress registration form', 'LoginRadius' ); ?></span>
+									</label>
+									<label>
+										<input type="radio" name="LoginRadius_settings[LoginRadius_regformPosition]" value="beside" <?php echo ( isset($loginRadiusSettings['LoginRadius_regformPosition']) && $loginRadiusSettings['LoginRadius_regformPosition'] == 'beside') ? 'checked = "checked"' : ''; ?> />
+										<span><?php _e( 'Display the Social Login interface above the Buddypress registration form', 'LoginRadius' ); ?></span>
+									</label>
+								</div>
+								<?php
+							}
+						?>
 					</label>
-					
 				</div>
 			</div>
 		</div>

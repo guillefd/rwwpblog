@@ -30,6 +30,20 @@ class Login_Radius_SDK {
         }
     }
 
+
+	public function loginradius_fetch_access_token($token, $secret){
+
+		$ValidateUrl = "https://".LR_DOMAIN."/api/v2/access_token?token=".$token."&secret=".$secret;
+       	$Response = $this->loginradius_call_api($ValidateUrl);
+		if(isset($Response -> access_token) && $Response -> access_token != ''){
+			return $Response -> access_token;
+		}else{
+			die('Error in fetching access token.');
+	}
+}
+
+
+
     /**
      * LoginRadius function - To fetch social profile data from the user's social account after authentication. The social profile will be retrieved via oAuth and OpenID protocols. The data is normalized into LoginRadius' standard data format.
      *

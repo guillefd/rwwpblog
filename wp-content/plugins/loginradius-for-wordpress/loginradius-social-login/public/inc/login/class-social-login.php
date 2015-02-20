@@ -62,9 +62,9 @@ if ( !class_exists( 'Social_Login' ) ) {
             }
             //Filter for changing buddypress avatar.
             if ( isset( $loginRadiusSettings['LoginRadius_socialavatar'] ) && $loginRadiusSettings['LoginRadius_socialavatar'] == 'socialavatar' ) {
-                add_filter( 'bp_core_fetch_avatar', array('Login_Helper', 'change_buddypress_avatar'), 10, 2 );
+                add_filter( 'bp_core_fetch_avatar', array('Social_Login', 'change_buddypress_avatar'), 10, 2 );
             }
-            add_action( 'bp_include', array('Login_Helper', 'set_budddy_press_status_variable') );
+            
 
             // show Social Login interface before buddypress login form and register form
             if ( ( isset( $loginRadiusSettings['LoginRadius_regform'] ) && $loginRadiusSettings['LoginRadius_regform'] == '1' && isset( $loginRadiusSettings['LoginRadius_regformPosition'] ) && $loginRadiusSettings['LoginRadius_regformPosition'] == 'beside' ) ) {
@@ -91,7 +91,7 @@ if ( !class_exists( 'Social_Login' ) ) {
             if ( get_option( 'loginradius_version' ) != LOGINRADIUS_MIN_WP_VERSION ) {
                 $this->update_plugin_meta_if_old_verison();
             }
-            
+
             add_action( 'wp_enqueue_scripts', array($this, 'front_end_scripts') );
             add_action( 'parse_request', array($this, 'login_radius_connect') );
             add_action( 'wp_enqueue_scripts', array($this, 'front_end_css') );
@@ -105,7 +105,7 @@ if ( !class_exists( 'Social_Login' ) ) {
          * After fetching data, appropriate action is taken on the basis of LoginRadius plugin settings
          */
         public static function login_radius_connect() {
-            global $wpdb, $loginRadiusSettings, $loginRadiusObject;
+            global $wpdb, $loginRadiusSettings, $loginradius_api_settings, $loginRadiusObject;
 
             if ( isset( $_GET['loginradius_linking'] ) && isset( $_REQUEST['token'] ) ) {
                 Login_Radius_Common:: perform_linking_operation();
@@ -123,10 +123,12 @@ if ( !class_exists( 'Social_Login' ) ) {
 
             if ( !is_user_logged_in() && isset( $_REQUEST['token'] ) ) {
                 //Is request token is set
-                $loginRadiusSecret = isset( $loginRadiusSettings['LoginRadius_secret'] ) ? $loginRadiusSettings['LoginRadius_secret'] : '';
+                $loginRadiusSecret = isset( $loginradius_api_settings['LoginRadius_secret'] ) ? $loginradius_api_settings['LoginRadius_secret'] : '';
+
+				$access_token = $loginRadiusObject->loginradius_fetch_access_token($_REQUEST['token'],$loginRadiusSecret);
 
                 // Fetch user profile using access token ......
-                $responseFromLoginRadius = $loginRadiusObject->loginradius_get_user_profiledata( $_REQUEST['token'] );
+                $responseFromLoginRadius = $loginRadiusObject->loginradius_get_user_profiledata( $access_token );
 
                 if ( isset( $responseFromLoginRadius->ID ) && $responseFromLoginRadius->ID != null ) {
                     // If profile data is retrieved successfully
@@ -173,7 +175,7 @@ if ( !class_exists( 'Social_Login' ) ) {
                         return;
                     }
                 } else {
-                    
+
                     if ( empty( self::$loginRadiusProfileData['Email'] ) ) {
                         // email is empty for social profile data
                         $dummyEmail = isset( $loginRadiusSettings['LoginRadius_dummyemail'] ) ? $loginRadiusSettings['LoginRadius_dummyemail'] : '';
@@ -419,7 +421,7 @@ if ( !class_exists( 'Social_Login' ) ) {
         /**
          * Replace buddypress default avatar with social avatar.
          */
-        public function change_buddypress_avatar( $text, $args ) {
+        public static function change_buddypress_avatar( $text, $args ) {
             //Check arguments
             if ( is_array( $args ) ) {
                 if ( !empty( $args['object'] ) && strtolower( $args['object'] ) == 'user' ) {

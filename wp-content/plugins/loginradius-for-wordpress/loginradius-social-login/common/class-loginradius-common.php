@@ -15,9 +15,9 @@ if ( !class_exists( 'Login_Radius_Common' ) ) {
          * Check if ID can be link or not. if yes the link account.
          */
         public static function link_account_if_possible() {
-            global $loginRadiusObject, $wpdb, $loginRadiusSettings, $user_ID;
+            global $loginRadiusObject, $wpdb, $loginradius_api_settings, $user_ID;
 
-            $loginRadiusSecret = isset( $loginRadiusSettings['LoginRadius_secret'] ) ? $loginRadiusSettings['LoginRadius_secret'] : '';
+            $loginRadiusSecret = isset( $loginradius_api_settings['LoginRadius_secret'] ) ? $loginradius_api_settings['LoginRadius_secret'] : '';
             $loginRadiusMappingData = array();
             if( null == $loginRadiusObject){
                 $loginRadiusObject = new Login_Radius_SDK();
@@ -102,9 +102,9 @@ if ( !class_exists( 'Login_Radius_Common' ) ) {
          * Check if scripts are to be loaded in footer according to plugin option
          */
         public static function scripts_in_footer_enabled() {
-            global $loginRadiusSettings;
+            global $loginradius_api_settings;
 
-            if ( isset( $loginRadiusSettings['scripts_in_footer'] ) && $loginRadiusSettings['scripts_in_footer'] == 1 ) {
+            if ( isset( $loginradius_api_settings['scripts_in_footer'] ) && $loginradius_api_settings['scripts_in_footer'] == 1 ) {
                 return true;
             }
             return false;
@@ -156,6 +156,18 @@ if ( !class_exists( 'Login_Radius_Common' ) ) {
             <script src="//hub.loginradius.com/include/js/LoginRadius.js"></script>
             <script src = '<?php echo LOGINRADIUS_PLUGIN_URL . "assets/js/LoginRadiusSDK.2.0.0.js";?>' ></script>
             <script type="text/javascript">
+            function detectmob() {
+                if (navigator.userAgent.match(/Android/i) || navigator.userAgent
+                .match(/webOS/i) || navigator.userAgent.match(/iPhone/i) ||
+                navigator.userAgent.match(/iPad/i) || navigator.userAgent
+                .match(/iPod/i) || navigator.userAgent.match(
+                /BlackBerry/i) || navigator.userAgent.match(
+                /Windows Phone/i)) {
+                return true;
+                } else {
+                return false;
+                }
+            }
             var loginRadiusOptions = {};
             loginRadiusOptions.login = true;
             LoginRadius_SocialLogin.util.ready(function() {
@@ -164,7 +176,12 @@ if ( !class_exists( 'Login_Radius_Common' ) ) {
                 $ui.apikey = "<?php echo $loginradius_api_settings['LoginRadius_apikey'] ?>";
                 $ui.callback = "<?php echo $location ?>";
                 $ui.lrinterfacecontainer = "interfacecontainerdiv";
-                $ui.is_access_token = true;
+                if (detectmob()) {
+                    $ui.isParentWindowLogin = true;
+                } else {
+                    $ui.is_access_token = true;
+                }
+
                 <?php
                 if ( isset( $loginRadiusSettings["LoginRadius_interfaceSize"] ) && $loginRadiusSettings["LoginRadius_interfaceSize"] == "small" ) {
                     echo '$ui.interfacesize ="small";';
